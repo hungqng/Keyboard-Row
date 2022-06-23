@@ -18,3 +18,9 @@ class Solution:
                 res.append(word)
         return res
 
+        # Solution 2
+        return filter(lambda word:
+                        set(word.lower()) - set("qwertyuiop") == set() or
+                        set(word.lower()) - set("asdfghjkl") == set() or
+                        set(word.lower()) - set("zxcvbnm") == set(),
+                    words)
